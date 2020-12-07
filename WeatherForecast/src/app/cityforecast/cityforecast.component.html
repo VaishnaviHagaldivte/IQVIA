@@ -1,0 +1,36 @@
+<!-- <p>cityforecast works!</p> -->
+<div class="container">
+    <div class="cityName">{{cityName}} <span class="refresh" (click)="refreshCity(cityName)"><i class="fa fa-sync-alt"></i></span></div>
+    <!-- <div class="weatherInfo"> -->
+        <span *ngIf="currentWeather=='Clouds'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/cloudy.svg"/></span>
+        <span *ngIf="currentWeather=='Rain'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/rainy-6.svg"/></span>
+        <span *ngIf="currentWeather=='Snow'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/snowy-5.svg"/></span>
+        <span *ngIf="currentWeather=='Clear sky'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/weather_sagittarius.svg"/></span>
+        <span *ngIf="currentWeather=='Mist'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/weather_sunset.svg"/></span>
+        <div class="currWeather">{{currentWeather}}</div>
+        <div class="currTemp">{{currTemp}}</div>
+        <div class="wind">Wind: {{wind}}</div>
+        <div class="pressure">Pressure {{pressure}}</div>
+        <br/>
+        <div class="forecast">
+            <div *ngFor="let data of weatherForecastData">
+                <span class="date">{{data.dateInfo | date: "d EEE"}}</span>
+            </div>
+        </div>
+        <div class="forecast">
+            <div *ngFor="let data of weatherForecastData">
+                <span class="imgClass" *ngIf="data.forecast=='Clouds'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/cloudy.svg"/></span>
+                <span class="imgClass" *ngIf="data.forecast=='Rain'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/rainy-6.svg"/></span>
+                <span class="imgClass" *ngIf="data.forecast=='Snow'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/snowy-5.svg"/></span>
+                <span class="imgClass" *ngIf="data.forecast=='Clear'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/day.svg"/></span>
+                <span class="imgClass" *ngIf="data.forecast=='Mist'"><img src="../../assets/amcharts_weather_icons_1.0.0/animated/weather_sunset.svg"/></span>
+            </div>
+        </div>
+        <div class="forecast">
+            <div *ngFor="let data of weatherForecastData">
+                <span class="weather">{{data.temp}}</span>
+            </div>
+        </div>
+    <!-- </div> -->
+    
+</div>

@@ -1,0 +1,46 @@
+/* .container{
+    display
+} */
+.cityName {
+    color: black;
+    font-size: 16px;
+    position: fixed;
+    top: 5%;
+    left: 3%;
+    margin: auto;
+    width: 100%;
+}
+.refresh{
+    margin-left: 50%;
+    cursor: pointer;
+}
+img {
+    margin: 5% 0 0 0;
+    width: 15vw;
+    height: 28vh;
+}
+.currWeather {
+    margin: -8% 0 0 30%;
+}
+.currTemp {
+    margin: 3% 0 0 30%;
+}
+.wind {
+    margin: 4% 0 0 30%;
+}
+.pressure {
+    margin: 5% 0 0 30%;
+}
+.forecast {
+    display: flex;
+    justify-content: space-around;
+}
+.date {
+    margin: 5% 0 0 2%;
+}
+.imgClass {
+    margin: 11% 2% 0 2%;
+}
+.weather {
+    margin: 12% 0 0 0%;
+}
